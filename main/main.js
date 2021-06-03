@@ -204,7 +204,8 @@ var wpServerlessSearch = (function () {
   ) {
     return `<article>
       <header class='entry-header'>
-        <h2 class='entry-title'><a href='` + postContentData.link + `' rel='bookmark'>` + postContentData.title + `</a></h2>
+        <h3 class='entry-title'><a href='` + postContentData.link + `' rel='bookmark'>` + postContentData.title + `</a></h3>
+        <div class='entry-summary'><p>`+postContentData.excerpt.replace(/<[^>]*>/g, '').substring(0,300)+`</p></div>
       </header>
     </article>`;
   }
